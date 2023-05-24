@@ -3,12 +3,13 @@
 
 from flask import Flask, render_template
 from flask_babel import Babel
+from datetime import datetime
 
 app = Flask(__name__)
 babel = Babel(app)
 
 
-class Config(objects):
+class Config(object):
     """class configures languages"""
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
